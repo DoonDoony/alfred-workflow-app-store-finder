@@ -3,27 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>doon.appStoreFinder.alfred.workflow</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>55F4D43F-FD2E-4BE3-8FCA-CAE0F3B29F8C</key>
-		<array/>
+		<key>B4294FFE-96FB-4F3F-B74D-EFBB26484328</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D9925A3-5C1E-44F6-B05C-CB918796CA32</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Doon</string>
 	<key>description</key>
-	<string>blah</string>
+	<string>Find your app in MacOS App Store</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Mac App Store</string>
+	<string>App Store Finder</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -35,27 +48,27 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>mas</string>
+				<string>asf</string>
 				<key>queuedelaycustom</key>
-				<integer>3</integer>
+				<integer>10</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>wait</string>
+				<string>...By the way, what is your favorite anime?</string>
 				<key>script</key>
-				<string>/opt/homebrew/Caskroom/miniconda/base/envs/alfred-workflow-macos-app-store/bin/python /Users/doon/Projects/alfred-workflow-macos-app-store/main.py "{query}"</string>
+				<string>python main.py "{query}"</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>Find app in MacOS App Store</string>
 				<key>title</key>
-				<string>dddd</string>
+				<string>App Store Finder</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -64,24 +77,52 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>55F4D43F-FD2E-4BE3-8FCA-CAE0F3B29F8C</string>
+			<string>B4294FFE-96FB-4F3F-B74D-EFBB26484328</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>3D9925A3-5C1E-44F6-B05C-CB918796CA32</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Find app in MacOS App Store</string>
 	<key>uidata</key>
 	<dict>
-		<key>55F4D43F-FD2E-4BE3-8FCA-CAE0F3B29F8C</key>
+		<key>3D9925A3-5C1E-44F6-B05C-CB918796CA32</key>
 		<dict>
 			<key>xpos</key>
-			<integer>235</integer>
+			<integer>350</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>80</integer>
+		</dict>
+		<key>B4294FFE-96FB-4F3F-B74D-EFBB26484328</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<integer>80</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/doondoony</string>
 </dict>
 </plist>
