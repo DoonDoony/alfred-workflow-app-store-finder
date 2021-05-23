@@ -1,6 +1,8 @@
-# 💡 MacOS App Store Finder
+# 🎩 Alfred Workflow - MacOS App Store Finder
 
 Find MacOS Application with a keyword **"asf"**
+
+*"asf" is short for **A**pp **S**tore **F**inder*
 
 ![demo](assets/demo.gif)
 
@@ -11,3 +13,8 @@ Find MacOS Application with a keyword **"asf"**
 ## ✨ Features
 - Provides App Store search results available in your country
 - Only MacOS software search results are provided
+
+## 🙇‍♂️ Built With
+- Python 2.7.x
+- [Alfred-Workflow](https://github.com/deanishe/alfred-workflow)
+- [Poetry](https://python-poetry.org)
