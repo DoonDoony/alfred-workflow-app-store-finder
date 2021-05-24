@@ -1,9 +1,8 @@
 # encoding: UTF-8
-
-
 import os
 
 import attr
+from typing import NoReturn
 from workflow import web
 
 from src.consts import IP_INFO_URL, ICONS_DIR, APP_STORE_APPSCHEME
@@ -28,18 +27,22 @@ def find_app(term, country):  # type: (unicode, unicode) -> AppStoreSearchRespon
     return AppStoreSearchResponse(**data)
 
 
-def get_icon(image_url):  # type: (unicode) -> bytes
-    response = web.get(image_url)
-    response.raise_for_status()
-    return response.content
+def get_icon(image_url, identifier):  # type: (unicode, unicode) -> unicode
+    filepath = _get_icon_filepath(identifier)
+    if not os.path.exists(filepath):
+        response = web.get(image_url)
+        response.raise_for_status()
+        _save_image(response.content, filepath)
+    return filepath
 
 
-def save_image(image, identifier):  # type: (bytes, unicode) -> unicode
-    extension = u".jpg"
-    filepath = os.path.join(ICONS_DIR, identifier + extension)
+def _get_icon_filepath(identifier):  # type: (unicode) -> unicode
+    return os.path.realpath(os.path.join(ICONS_DIR, identifier + u".jpg"))
+
+
+def _save_image(image, filepath):  # type: (bytes, unicode) -> NoReturn
     with open(filepath, "wb") as image_file:
         image_file.write(image)
-        return os.path.realpath(image_file.name)
 
 
 def get_app_store_appscheme(country, track_view_url):  # type: (unicode, TrackViewUrl) -> unicode
