@@ -10,7 +10,7 @@ import attr  # noqa: E402
 from workflow import Workflow3  # noqa: E402
 
 from src.models import WorkflowItem  # noqa: E402
-from src.utils import find_app, get_ip_info, save_image, get_icon, get_app_store_appscheme  # noqa: E402
+from src.utils import find_app, get_ip_info, get_icon, get_app_store_appscheme  # noqa: E402
 
 if TYPE_CHECKING:
     from src.models import IpInfoResponse, AppStoreSearchResult  # noqa: E402
@@ -19,8 +19,7 @@ tasks = []
 
 
 def create_workflow_item(ip_info, app):  # type: (IpInfoResponse, AppStoreSearchResult) -> WorkflowItem
-    icon_image = get_icon(app.artworkUrl60)
-    icon = save_image(icon_image, app.trackViewUrl.app_id)
+    icon = get_icon(app.artworkUrl60, app.trackViewUrl.app_id)
     arg = get_app_store_appscheme(ip_info.country, app.trackViewUrl)
     return WorkflowItem(title=app.trackCensoredName, subtitle=app.description, arg=arg, icon=icon)
 
