@@ -1,6 +1,4 @@
 # encoding: UTF-8
-
-
 from string import Template
 
 APP_STORE_APPSCHEME = Template("macappstores://apps.apple.com/${country}/app/${app_name}/${app_id}")
