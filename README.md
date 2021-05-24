@@ -18,3 +18,7 @@ Find MacOS Application with a keyword **"asf"**
 - Python 2.7.x
 - [Alfred-Workflow](https://github.com/deanishe/alfred-workflow)
 - [Poetry](https://python-poetry.org)
+
+## ✅ TODO
+- [ ] Do not download icon if a file already exists
+- [ ] Make a command "asfc" to delete icon images
