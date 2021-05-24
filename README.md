@@ -20,5 +20,5 @@ Find MacOS Application with a keyword **"asf"**
 - [Poetry](https://python-poetry.org)
 
 ## ✅ TODO
-- [ ] Do not download icon if a file already exists
+- [x] Do not download icon if a file already exists
 - [ ] Make a command "asfc" to delete icon images
