@@ -74,6 +74,7 @@ class IpInfoResponse(object):
     readme = attr.ib(type=unicode)
     region = attr.ib(type=unicode)
     timezone = attr.ib(type=unicode)
+    hostname = attr.ib(type=unicode, default="")
 
 
 @attr.s
