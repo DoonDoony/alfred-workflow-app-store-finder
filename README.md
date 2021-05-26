@@ -27,7 +27,7 @@ $ fab build  # Running the command will generate the .alfredworkflow file
 
 
 ## ✅ TODO
-- [x] Do not download icon if a file already exists
-- [x] Make a command "asfc" to delete icon images and caches
-- [x] Build script
-- [x] Lightweight by packaging only compiled files (.pyc)
+- [x] ~~Do not download icon if a file already exists~~
+- [x] ~~Make a command "asfc" to delete icon images and caches~~
+- [x] ~~Build script~~
+- [x] ~~Lightweight by packaging only compiled files (.pyc)~~
