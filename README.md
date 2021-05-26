@@ -4,7 +4,7 @@ Find MacOS Application with a keyword **"asf"**
 
 *"asf" is short for **A**pp **S**tore **F**inder*
 
-![demo](assets/demo.gif)
+![demo](demo.gif)
 
 ## 🔨 Installation
 1. Download workflow from [here](https://github.com/DoonDoony/alfred-workflow-app-store-finder/releases/latest/download/appstorefinder.alfredworkflow)
@@ -19,6 +19,15 @@ Find MacOS Application with a keyword **"asf"**
 - [Alfred-Workflow](https://github.com/deanishe/alfred-workflow)
 - [Poetry](https://python-poetry.org)
 
+## 🎁 How to package 
+```bash
+$ poetry install --no-root
+$ fab build  # Running the command will generate the .alfredworkflow file
+```
+
+
 ## ✅ TODO
 - [x] Do not download icon if a file already exists
-- [ ] Make a command "asfc" to delete icon images
+- [x] Make a command "asfc" to delete icon images and caches
+- [x] Build script
+- [x] Lightweight by packaging only compiled files (.pyc)
