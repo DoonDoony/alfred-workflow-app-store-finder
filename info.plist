@@ -8,11 +8,37 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>67051782-2DD5-4B05-9DC8-CEE7ED6BE543</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E868593B-2E2B-4055-818D-948EE0F80A0F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B4294FFE-96FB-4F3F-B74D-EFBB26484328</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>3D9925A3-5C1E-44F6-B05C-CB918796CA32</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E868593B-2E2B-4055-818D-948EE0F80A0F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4718CCDA-86D7-4855-9986-DA462ED81CB6</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -60,7 +86,7 @@
 				<key>runningsubtext</key>
 				<string>...By the way, what is your favorite anime?</string>
 				<key>script</key>
-				<string>python main.py "{query}"</string>
+				<string>python main.pyc "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -100,6 +126,65 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>asfc</string>
+				<key>subtext</key>
+				<string>Thanos will have nothing but dust and blood...</string>
+				<key>text</key>
+				<string>Delete all icons and caches</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>67051782-2DD5-4B05-9DC8-CEE7ED6BE543</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python clean.pyc</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E868593B-2E2B-4055-818D-948EE0F80A0F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>empty.mp3</string>
+				<key>systemsound</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>4718CCDA-86D7-4855-9986-DA462ED81CB6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Find app in MacOS App Store</string>
@@ -108,9 +193,23 @@
 		<key>3D9925A3-5C1E-44F6-B05C-CB918796CA32</key>
 		<dict>
 			<key>xpos</key>
-			<integer>350</integer>
+			<integer>260</integer>
 			<key>ypos</key>
 			<integer>80</integer>
+		</dict>
+		<key>4718CCDA-86D7-4855-9986-DA462ED81CB6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>195</integer>
+		</dict>
+		<key>67051782-2DD5-4B05-9DC8-CEE7ED6BE543</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<integer>195</integer>
 		</dict>
 		<key>B4294FFE-96FB-4F3F-B74D-EFBB26484328</key>
 		<dict>
@@ -119,9 +218,16 @@
 			<key>ypos</key>
 			<integer>80</integer>
 		</dict>
+		<key>E868593B-2E2B-4055-818D-948EE0F80A0F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>195</integer>
+		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.0</string>
+	<string>1.0.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/doondoony</string>
 </dict>
